@@ -1,0 +1,709 @@
+#Aula 01 - INTRODUÇÃO 
+Utilizando o modolo Tkinter.
+O que é GUI??
+° Graphical User Interface.
+° Aplicações com forms/ windows/janelas...
+°Interação mais fácial por parte do utilizador.
+Porquê o Tkinter????
+° Eistem mutiplas soluções:Kivy, wxPython,etc.
+° Tkinter vem integrando soluções no Python.
+° Simples de aprender. Comunidade muito grande.
+°Widgets mais genéricos ja incluídos.
+° Aplicações multiplataforma(Windows,Mac OS, Linus ).
+
+#Aula 9-> LABEL WIDGET E COMO FUNCIONA O PACK
+from tkinter import *
+
+menu_incial = Tk()
+menu_inicial.title("Titulo")
+label_1 = Label(menu_inicial, text = "Esse e o label 1")
+label_2 = Label(menu_inicial, text = "Esse e o label 2")
+
+cmd = Button(menu_inicial, text = "Execultar")
+
+label_1.pack()
+label_2.pack()
+cmd.pack()
+
+menu_inicial.mainloop()
+
+#Aula 10 -> ALTERAR CORES E TIPOS DE LETRA
+
+from tkinter import *
+
+menu_inicial = tk()
+menu_inicial.title("Titulo")
+
+label_1 = Label(meni_inicial, text=  "Este é o label 1",
+bg = "yellow",
+fg = "red"
+
+)
+label_1.pack()
+
+label_2 = Label(meni_inicial, text=  "Este é o label 2",
+bg = "yellow",
+font = "Arial 20 bold italic",
+fg = "red"
+
+)
+label_3.pack()
+
+label_3 = Label(meni_inicial, text=  "Este é o label 3",
+font = "Verdana 42 bold,
+fg = "red"
+
+)
+label_3.pack()
+
+menu_inicial.mainloop()
+
+#AULA 11
+
+#Aula 11 -> DEFINIR LARGURA DE UM LABEL E IMPLICAÇÕES
+
+from tkinter import *
+
+menu_inicial = Tk()
+menu_inicial.title("Titulo")
+
+label_1 = Label(menu_inicial,
+				text = "Este é o label 1",
+				font = "Arial 20",
+				bg = "red",
+				width = 20)
+label_1.pack()
+
+label_2 = Label(menu_inicial,
+				text = "Este é o labe, 2",
+				font ="Arial 40",
+				bg = "red",
+				width = 20)
+label_2.pack()
+menu_inicial.mainloop()
+
+#Aula 12 -> LABEL COM VÁRIAS LINHAS, BORDER E RELIEF
+
+from tkinter import *
+
+menu_inicial = Tk()
+menu_inicial.title("Titulo")
+menu_inicial.geometry("500x300")
+
+#Adicionando duas frases no mesmo label e pulando de linha usando o"\n"
+label_1 = Label(menu_inicial,
+				text = "Frase 1 'solid' ",
+				font = "Arial 20",
+				#bg = "red",
+			 	bd =5,
+				relief = "solid")
+label_1.pack()
+
+label_2 = Label(menu_inicial,
+				text = "Frase 2 'flat'",
+				font = "Arial 20",
+				#bg = "red",
+			 	bd =5,
+				relief = "flat")
+label_2.pack()
+
+label_3 = Label(menu_inicial,
+				text = "Frase 3 'raised' ",
+				font = "Arial 20",
+				#bg = "red",
+			 	bd =5,
+				relief = "raised")
+label_3.pack()
+
+label_4 = Label(menu_inicial,
+				text = "Frase 4 'sunken' ",
+				font = "Arial 20",
+				#bg = "red",
+			 	bd =5,
+				relief = "sunken")
+label_4.pack()
+
+label_5 = Label(menu_inicial,
+				text = "Frase 5 'ridge' ",
+				font = "Arial 20",
+				#bg = "red",
+			 	bd =5,
+				relief = "ridge")
+label_5.pack()
+
+label_6 = Label(menu_inicial,
+				text = "Frase 6 'groove' ",
+				font = "Arial 20",
+				#bg = "red",
+			 	bd =5,
+				relief = "groove")
+label_6.pack()
+
+menu_inicial.mainloop()
+
+#Aula 13 -> ALTURA DE UM LABEL E ALINAMENTO DE TEXTO
+
+from tkinter import *
+
+menu_inicial = Tk()
+menu_inicial.title("Titulo")
+menu_inicial.geometry("500x500")
+
+label_1 = Label(
+	menu_inicial,
+	text = "Frase de testes",
+	font = "Arial 20",
+	bd = 1,
+	relief = "solid",
+	width  = 25,
+	height = 4,#Altura é a quantidade de frases que eu posso colocar dentro do meu height 
+	anchor =NW #pontos cardias em letra maiusculas CENTER deixa no centro
+	).pack()
+
+menu_inicial.mainloop()
+
+#Aula 14 -> PADDING (Vestical e horizotal) E JUSTIIFICAÇÃO DE TEXTO NUM LABEL
+
+from tkinter import *
+
+menu_inicial = Tk()
+menu_inicial.title("Testes Tkinter")
+menu_inicial.geometry("500x500")
+menu_inicial.iconbitmap("images/icon1.ico")
+label_1 = Label(
+	menu_inicial,
+	text = "Testes Python usando Tkinter",
+	font = "Arial 20",
+	bd = 1,
+	relief = "solid",
+	padx = 50,
+	pady = 50,
+	justify = RIGHT #justificar o texto a direita ou a esquerda LEFT/RIGHT
+	).pack()
+
+label_1 = Label(
+	menu_inicial,
+	text = "Python Utilizando Tkinter\n outro teste\n outro teste",
+	font = "Arial 10",
+	bd = 1,
+	relief = "solid",
+	padx = 50,
+	pady = 50
+	).pack()
+label_1 = Label(
+	menu_inicial,
+	text = "Frase teste\n teste  ",
+	font = "Arial 10",
+	bd = 1,
+	relief = "solid",
+	width =50,
+	height = 5,
+	justify =RIGHT,
+	anchor =W
+	).pack()
+
+menu_inicial.mainloop()
+
+#Aula 15 -> DEFINIR E ALTERAR PROPRIEDADES DE UM LABEL
+
+from tkinter import *
+
+menu_inicial = Tk()
+menu_inicial.title("Testes Tkinter")
+menu_inicial.geometry("500x200")
+menu_inicial.iconbitmap("images/icon1.ico")
+
+##label_1 = Label (
+##		menu_inicial,
+##		text = "Frase teste",
+##		font = "Arial 20",
+##		bd = 1,
+##		relief = "solid"
+##	)
+##label_1.pack()##
+
+label_2 = Label (menu_inicial)
+label_2['text'] = "Texto do label 2"
+label_2['font'] = 'Arial 20'
+label_2['bd'] = "1"
+label_2['relief'] = "solid"
+label_2.pack()
+
+for item in label_2.keys():
+	print(item, " :" , label_2[item])
+
+#print(label_2.keys()) # Conjunto de chaeves de propriedades que podemos alterar 
+##label_2['text'] = "Novo texto"
+##print(label_1['font'])# mostra no terminal qual a e fonte 
+menu_inicial.mainloop()
+
+
+#Aula 16 -> LABEL TEXT VARIAVEIS E STRINGVAR
+
+from tkinter import *
+
+menu_inicial = Tk()
+menu_inicial.title("Testes Tkinter")
+menu_inicial.geometry("500x200")
+menu_inicial.iconbitmap("images/icon1.ico")
+
+texto = StringVar() 
+texto.set("Novo texto")
+
+label1 = Label (menu_inicial,
+	#text = texto,
+	#text = "Palavra",
+	font = "Arial 20",
+	bg = "red",
+	fg = "white",
+	textvariable = texto
+)
+label1.pack()
+
+label2 = Label (menu_inicial,
+	#text = texto,
+	#text = "Palavra",
+	font = "Arial 20",
+	bg = "red",
+	fg = "white",
+	textvariable = texto
+)
+label2.pack()
+
+label3 = Label (menu_inicial,
+	#text = texto,
+	#text = "Palavra",
+	font = "Arial 20",
+	bg = "red",
+	fg = "white",
+	textvariable = texto
+)
+label3.pack()
+
+label4 = Label (menu_inicial,
+	#text = texto,
+	#text = "Palavra",
+	font = "Arial 20",
+	bg = "red",
+	fg = "white",
+	textvariable = texto
+)
+label4.pack()
+
+
+
+texto.set("João Ribeiro")
+#label1['text'] = "Olá mundo!!"
+menu_inicial.mainloop()
+
+#Aula 17 -> INTRODUÇÃO AO LAYOUT EM GRID
+#grid é uma tabela/ com linhas e colunas / (Row = 0 Column = 1)
+
+from tkinter import *
+
+#grid manager
+menu_inicial = Tk()
+menu_inicial.title("Testes Tkinter")
+#menu_inicial.geometry("500x500")
+menu_inicial.iconbitmap("images/icon1.ico")
+
+label1 = Label(menu_inicial, text = "label1", font = "Arial 20", bg = "red")
+label2 = Label(menu_inicial, text = "label2",font = "Arial 20", bg = "green")
+label3 = Label(menu_inicial, text = "label3",font = "Arial 20", bg = "blue")
+
+#label1.pack()
+#label2.pack()
+
+btn1 = Button(menu_inicial, text = "Click1")
+btn2 = Button(menu_inicial, text = "Click2")
+btn3 = Button(menu_inicial, text = "Click3")
+
+label1.grid(row = 0, column = 0)
+label2.grid(row =0, column =1)
+label3.grid(row =0, column =2)
+
+btn1.grid(row = 1, column = 0)
+btn2.grid(row = 1, column =1)
+btn3.grid(row = 1, column =2)
+
+menu_inicial.mainloop()
+
+#Aula 18 -> APLICAÇÃO PARA DESENHO DE INTERFACES
+
+
+from tkinter import *
+
+
+menu_inicial = Tk()
+menu_inicial.title("Testes Tkinter")
+menu_inicial.geometry("500x500")
+menu_inicial.iconbitmap("images/icon1.ico")
+
+
+
+menu_inicial.mainloop()
+
+#Aula 19 -> QUADRO DE LOGIN COM GRID E STICKY
+
+
+from tkinter import *
+
+#grid master
+root = Tk()
+root.title("TESTE TKINTER")
+#root.geometry("500x500")
+root.iconbitmap("images/icon1.ico")
+
+Label(root, text = "Usúario: ").grid(row = 0, sticky = W)
+Label(root, text = "Senha: ").grid(row = 1, sticky  = W)
+
+text_usuario = Entry(root).grid(row = 0, column = 1)
+text_senha = Entry(root).grid(row = 1, column = 1)
+
+cmd_login = Button(root, text = "Login").grid(row = 2, column = 1, sticky = E)
+root.mainloop()
+
+#Aula 20 -> COLUMNSPAN EM GRID
+
+#colunspan ocupa mais de uma coluna adicionando o tanto de coluna que deseja ocupar
+from tkinter import *
+
+#grid master
+root = Tk()
+root.title("Login")
+#root.geometry("500x500")
+root.iconbitmap("images/icon1.ico")
+
+#Label(root, width = 20, bg = "red").grid(column = 0)
+#Label(root, width = 20, bg = "green").grid(column = 1)
+#Label(root, width = 40, bg = "yellow").grid(columnspan =2, sticky = "we")
+
+Label(root, text = "texto", bg = "red").grid(column = 0)
+Label(root, text = "texto" , bg = "green").grid(column = 1)
+Label(root, text = "texto", bg = "red").grid(column = 2)
+Label(root, text = "texto", bg = "yellow").grid(columnspan = 3, sticky ="we")
+
+root.mainloop()
+
+#Aula 21 -> PEQUENO EXERCICIO COM WIDGETS E EVENTOS
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+
+def mostarNome():
+    nome = textbox_1.get()
+    label_final = Label(root, text = "O seu nome é  " + nome)
+    label_final.grid()
+
+#------------------------------------------------------------
+#GUI
+root = Tk()
+root.title("Titulo do app")
+root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+#Criar os widgets
+label1= Label(root, text = "Escreva o seu nome:")
+textbox_1 = Entry(root)
+button_1 = Button(root, text = "Execultar", command = mostarNome)
+
+#Organizar os widgets
+label1.grid()
+textbox_1.grid()
+button_1.grid()
+
+root.mainloop()
+
+#Aula 22 -> EXERCÍCIO ANTERIOR COM STRINGVAR
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+#funções
+def mostraNome():
+    vartexto.set("O seu nome é " + textbox1.get()) # defininado vartexto em qualuer lugar do codigo
+
+
+#------------------------------------------------------------
+#GUI
+root = Tk()
+root.title("Aplicação")
+#root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+vartexto = StringVar()
+#-------------------------------------------------------------------------
+#Criando os Widgets
+label1 = Label(root, text = "O seu nome é:")
+textbox1 = Entry(root)
+button1 = Button(root, text = "Executar", command = mostraNome)
+label2 = Label(root, textvariable = vartexto)
+label3 = Label(root, textvariable = vartexto)
+label4 = Label(root, textvariable = vartexto)
+#-------------------------------------------------------------------------
+#Layout Widgets
+label1.grid()
+textbox1.grid()
+button1.grid()
+label2.grid()
+label3.grid()
+label4.grid()
+#-------------------------------------------------------------------------
+root.mainloop()
+
+#Aula 23 -> EXERCÍCIO FAHRENHEIT PARA CELSIUS
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+#Funções
+#C = (r-32) * 5/9
+def calcular():
+    F = float(textbox1.get())
+    C = (F - 32) * 5/9
+    final.set( str(round (C,1)) + "graus celsius")
+#------------------------------------------------------------
+
+#GUI
+root = Tk()
+root.title("Aplicação")
+#root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+final = StringVar()
+
+#-------------------------------------------------------------------------
+#Criando os Widgets
+label1 = Label(root, text = "Graus Fahrenheit:")
+textbox1 = Entry(root)
+button1 = Button(root,text = "Calcular",command = calcular)
+label_resultado = Label(root, textvariable = final)
+#-------------------------------------------------------------------------
+#Layout Widgets
+label1.grid()
+textbox1.grid()
+button1.grid()
+label_resultado.grid()
+#-------------------------------------------------------------------------
+root.mainloop()
+
+#Aula 24 -> FOCUS E TAB ORDER
+
+#foucos -> cursor pronto para adicionar o texto
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+#Funções
+def executar():
+    l1 ["text"] = t1.get()
+    l2 ["text"] = t2.get()
+    l3 ["text"] = t3.get()
+#------------------------------------------------------------
+
+#GUI
+root = Tk()
+root.title("App")
+#root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+
+
+#-------------------------------------------------------------------------
+#Criando os Widgets
+t1 = Entry(root)
+t2 = Entry(root)
+t3 = Entry(root)
+
+l1 = Label(root)
+l2 = Label(root)
+l3 = Label(root)
+b = Button(root, text = "Executar", command = executar)
+#-------------------------------------------------------------------------
+#Layout Widgets
+t1.grid()
+t2.grid()
+t3.grid()
+
+l1.grid()
+l2.grid()
+l3.grid()
+b.grid()
+
+t1.focus()
+#-------------------------------------------------------------------------
+root.mainloop()
+
+#Aula 25 -> INTRODUÇÃO A FRAME WIDGET
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+#Funções
+
+#------------------------------------------------------------
+
+#GUI
+root = Tk()
+root.title("App")
+#root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+
+
+#-------------------------------------------------------------------------
+#Criando os Widgets
+
+frame_login = Frame(root)
+
+label_usuario = Label(frame_login,text ="Usuário:")
+label_password = Label(frame_login, text = "Password:")
+text_usuario = Entry(frame_login)
+text_password =Entry(frame_login)
+cmd_entrar = Button(frame_login, text = "Entrar")
+#-------------------------------------------------------------------------
+#Layout Widgets
+label_usuario.grid(row = 0, column = 0)
+label_password.grid(row =1, column = 0)
+text_usuario.grid(row = 0, column = 1)
+text_password.grid(row= 1, column =1)
+cmd_entrar.grid(row =2, column =1)
+
+frame_login.grid()
+
+#-------------------------------------------------------------------------
+root.mainloop()
+
+#Aula 27 -> CRIANDO O NOSSO PROPRIO WIDGET
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+#Funções
+
+#------------------------------------------------------------
+
+#GUI
+root = Tk()
+root.title("App")
+#root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+
+
+#-------------------------------------------------------------------------
+#Criando os Widgets
+
+frame_nome = Frame(root)
+frame_endereco = Frame(root)
+
+
+label_name = Label(frame_nome, text ="Nome:")
+label_apelido = Label(frame_nome, text ="Apelido:")
+
+label_rua = Label(frame_endereco, text ="Rua:")
+label_cidade = Label(frame_endereco, text ="Cidade:")
+
+text_name = Entry(frame_nome)
+text_apelido = Entry(frame_nome)
+text_rua = Entry(frame_endereco)
+text_cidade = Entry(frame_endereco)
+
+cmd_salvar = Button(root, text = "Salvar")
+#-------------------------------------------------------------------------
+#Layout Widgets
+
+#label grid
+label_name.grid(row=0, column=0)
+label_apelido.grid(row=1, column=0)
+text_name.grid(row=0, column=1)
+text_apelido.grid(row=1, column=1)
+
+label_rua.grid(row=0, column=0)
+label_cidade.grid(row= 1, column=0)
+text_rua.grid(row=0, column=1)
+text_cidade.grid(row=1, column=1)
+
+
+
+
+#Botão grid
+
+
+#frame grid
+
+frame_nome.grid(row=0,column=0)
+frame_endereco.grid(row=0,column=1)
+
+cmd_salvar.grid(column = 1 )
+#-------------------------------------------------------------------------
+root.mainloop()
+
+#Aula 26 -> EXERCICIO COM UTILIZAÇÃO DE DUAS FRAMES
+
+#ESCOPO DO CODIGO
+from tkinter import *
+
+#grid master
+
+#-----------------------------------------------------------
+#O meu widget
+class FrameNome(Frame):
+   def __init__(self, meumaster):
+    super().__init__()
+    self['height'] = 150
+    self['width']  = 200
+    self['bd'] = 2
+    self['relief'] = SOLID
+
+    label_nome = Label(self, text = "Nome:")
+    text_nome = Entry(self)
+    label_nome.grid(row=0, column=0)
+    text_nome.grid(row=0, column=1)
+    text_nome.focus()
+
+#------------------------------------------------------------
+
+#GUI
+root = Tk()
+root.title("App")
+#root.geometry("200x100")
+root.iconbitmap("images/icon1.ico")
+
+
+
+#-------------------------------------------------------------------------
+#Criando os Widgets
+
+frame_nome_1 = FrameNome(root).grid()
+frame_nome_2 = FrameNome(root).grid()
+frame_nome_3 = FrameNome(root).grid()
+frame_nome_4 = FrameNome(root).grid()
+#frame_nome_1.grid()
+
+
+#-------------------------------------------------------------------------
+#Layout Widgets
+
+
+#-------------------------------------------------------------------------
+root.mainloop()
