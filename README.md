@@ -30,7 +30,7 @@
 
 ## Aula 9-> LABEL WIDGET E COMO FUNCIONA O PACK
 
-' ' 'python
+```python
 from tkinter import *
 
  menu_incial = Tk()
@@ -43,4 +43,4 @@ cmd = Button(menu_inicial, text = "Execultar")
 label_1.pack()
 label_2.pack()
 cmd.pack()
-' ' '
+```
