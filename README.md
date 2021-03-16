@@ -11,9 +11,9 @@
 
 - Aplicações com forms/ windows/janelas...
 
--Interação mais fácial por parte do utilizador.
+- Interação mais fácial por parte do utilizador.
 
-*Porquê o Tkinter????
+* Porquê o Tkinter????
 
 - Eistem mutiplas soluções:Kivy, wxPython,etc.
 
