@@ -30,7 +30,7 @@
 
 ## Aula 9-> LABEL WIDGET E COMO FUNCIONA O PACK
 
-' ' '
+' ' 'python
 from tkinter import *
 
  menu_incial = Tk()
